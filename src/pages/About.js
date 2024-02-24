@@ -29,11 +29,14 @@ function Index() {
           <a css={{ marginLeft: 'auto', padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Projects</a>
           <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/about'>About</a>
       </nav>
-      
-          <p>Troy Hillman is an experience designer shaping spaces within art, architecture, and fashion. </p>
-          <a href="/">Contact</a>
-          <a href="/">Instagram</a>
-          <ul>
+          <div css={{minHeight: '50dvh', display: 'flex', alignItems: 'center', }}> 
+              <p css={{ padding: '0 16px', fontSize: '48px', fontWeight: 800, lineHeight: 1,  }}>Troy Hillman is an experience designer shaping spaces within art, architecture, and fashion. </p>
+          </div>
+      <div css={{ padding: '0 16px', marginBottom: '16px' }}>
+          <a css={{ color: 'initial', textDecoration: 'none', fontWeight: 'bold', display: 'block'}} href="/">Contact</a>
+          <a css={{ color: 'initial', textDecoration: 'none', fontWeight: 'bold', display: 'block'}} href="/">Instagram</a>
+      </div>
+          <ul css={{ listStyleType: 'none', padding: '0 16px', margin: 0, display: 'flex', gap: '16px', flexWrap: 'wrap', fontSize: '12px' }}>
               <li>Creative Development</li>
               <li>Concept Building</li>
               <li>3D Design</li>
