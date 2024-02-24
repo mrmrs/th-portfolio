@@ -27,6 +27,10 @@ function Home() {
                 title: 'Nike ACG',
                 images: [
 
+                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_06.jpg",
+                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_07.jpg",
+                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_09.jpg",
+                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_51.jpg",
                     //2 2.jpg
                     //20190531-BeautyShots-004.jpg
                     //20190531-BeautyShots-006.jpg
@@ -43,10 +47,6 @@ function Home() {
                     //DSC07149.jpeg
                     //DSC07160.jpg
                     //DanielSalemi_Betak_JasonWu_DFS2660.jpg
-                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_06.jpg",
-                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_07.jpg",
-                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_09.jpg",
-                    "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_51.jpg",
                     //IMG_1025.JPG
                     //JW_HERO.jpg
                     //JasonWu_compilation_2.MP4
@@ -76,7 +76,7 @@ function Home() {
       <nav css={{ display: 'flex', gap: '16px', paddingLeft: '16px', paddingRight: '16px' }}>
           <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Troy Hillman</a>
           <a css={{ marginLeft: 'auto', padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Projects</a>
-          <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>About</a>
+          <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/about'>About</a>
       </nav>
       <img style={{ width: '100%' }} src={data.projects[0].images[randomInt(0,data.projects[0].images.length-1)]} />
       </div>
