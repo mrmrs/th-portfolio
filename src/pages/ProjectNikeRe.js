@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { jsx, css } from '@emotion/react'
 import chroma from 'chroma-js'
 import '../App.css';
+import Project from '../components/Project';
+
 const Card = ({
     title,
     image,
@@ -11,8 +13,7 @@ const Card = ({
 }) => {
     return (
         <a {...props} css={{
-            textDecoration: 'none',
-            color: 'initial',
+textDecoration: 'none', color: 'initial'
         }}>
         <div css={{ aspectRatio: '16/9', backgroundImage: 'url('+image+')', backgroundSize: 'cover' }}>
             </div>
@@ -43,6 +44,9 @@ function Home() {
         projects: [
             {
                 title: 'Nike ACG',
+                location: 'Tokyo, Japan',
+                'design': 'An attempt what ',
+                designLead: 'Troy Hillman',
                 images: [
 
                     "https://dlu344star2bj.cloudfront.net/th/HO20_ACG_NikeNYC_BXD_06.jpg",
@@ -63,9 +67,9 @@ function Home() {
                 design: 'Nike + Virgil Abloh',
                 designLead: 'Troy Hillman + Patty Wong',
                 images: [
-                    "https://dlu344star2bj.cloudfront.net/2_recreation-center_hovercraft.jpeg",
-                    "https://dlu344star2bj.cloudfront.net/7a01387c3ade4395a6d3625bd23d7a79.jpeg",
-                    "https://dlu344star2bj.cloudfront.net/8276174a7482426ea55e85e3299b8f1f.jpeg",
+                    //"https://dlu344star2bj.cloudfront.net/2_recreation-center_hovercraft.jpeg",
+                    //"https://dlu344star2bj.cloudfront.net/7a01387c3ade4395a6d3625bd23d7a79.jpeg",
+                    //"https://dlu344star2bj.cloudfront.net/8276174a7482426ea55e85e3299b8f1f.jpeg",
                     "https://dlu344star2bj.cloudfront.net/th/NikeRecCenter2.jpeg",
                     "https://dlu344star2bj.cloudfront.net/th/Nike_CHI_Recreation_1025.jpg",
                     "https://dlu344star2bj.cloudfront.net/th/Nike_CHI_Recreation_1213.jpg",
@@ -116,18 +120,25 @@ function Home() {
         ]
     }
 
-    const randomProjectInt = randomInt(0,data.projects.length-1)
 
   return (
       <div>
       <nav css={{ display: 'flex', gap: '16px', paddingLeft: '16px', paddingRight: '16px' }}>
           <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Troy Hillman</a>
 
-          <a css={{ marginLeft: 'auto', padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/#projects'>Projects</a>
+          <a css={{ marginLeft: 'auto', padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Projects</a>
           <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/about'>About</a>
       </nav>
-      <img style={{ width: '100%' }} src={data.projects[randomProjectInt].images[randomInt(0,data.projects[randomProjectInt].images.length-1)]} />
-      <section css={{padding: '0 16px 32px 16px'}} id="projects">
+        
+      <section css={{padding: '0 16px 32px 16px'}}>
+      <Project 
+          title={data.projects[1].title}  
+          location={data.projects[1].location} 
+          design={data.projects[1].design} 
+          designLead={data.projects[1].designLead} 
+          images={data.projects[1].images} />  
+
+<section css={{padding: '0 16px 32px 16px'}} id="projects">
       <h4 style={{textTransform: 'uppercase', fontSize: '12px', letterSpace: '-.015em' }}>Projects</h4>
       <div css={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '8px' }}>
       <Card href='/nike-acg' title={data.projects[0].title} 
@@ -139,10 +150,11 @@ function Home() {
       <Card href='/jason-wu' title={data.projects[2].title} 
           image={data.projects[2].images[randomInt(0,data.projects[2].images.length-1)]} 
           />
-          <Card href='proenza' title={data.projects[3].title} 
+      <Card href='/proenza' title={data.projects[3].title} 
           image={data.projects[3].images[randomInt(0,data.projects[3].images.length-1)]} 
           />
       </div>
+      </section>
       </section>
       </div>
   );
