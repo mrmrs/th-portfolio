@@ -126,7 +126,7 @@ function Home() {
           <a css={{ marginLeft: 'auto', padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/'>Projects</a>
           <a css={{ padding:'16px 0',fontWeight: 500, textDecoration: 'none', color: 'initial', textTransform: 'uppercase', letterSpacing: '-0.015em'}} href='/about'>About</a>
       </nav>
-      <img style={{ width: '100%' }} src={data.projects[randomProjectInt].images[randomInt(0,data.projects[randomProjectInt].length-1)]} />
+      <img style={{ width: '100%' }} src={data.projects[randomProjectInt].images[randomInt(0,data.projects[randomProjectInt].images.length-1)]} />
       <section css={{padding: '0 16px 32px 16px'}}>
       <h4>Projects</h4>
       <div css={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '32px' }}>
